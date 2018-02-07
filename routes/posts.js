@@ -3,7 +3,7 @@ const Express = require('express');
 const Joi = require('joi');
 const Celebrate = require('celebrate');
 
-const DB = require('../db.js');
+const DB = require('../database/db.js');
 
 const router = Express.Router();
 

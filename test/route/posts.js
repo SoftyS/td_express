@@ -7,7 +7,7 @@ const lab  = module.exports.lab = Lab.script();
 const Supertest = require('supertest');
 const Express = require('express');
 const PostRouter = require('../../routes/posts.js').router;
-const DB = require('../../db.js');
+const DB = require('../../database/db.js');
 
 const describe = lab.describe;
 const it = lab.it;

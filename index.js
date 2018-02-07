@@ -4,18 +4,22 @@ const BP = require('body-parser');
 
 const app = Express();
 
+//Body Parser:
 app.use(BP.json());
 
+//Routes of posts:
 app.use('/posts', require('./routes/posts').router);
-app.use(require('./routes/users').router);
+//Routes of users:
+app.use('/users',require('./routes/users').router);
+//Routes of bottles:
+app.use('/bottles',require('./routes/bottles').router);
 
+//Server:
 app.listen(8080, (err) => {
 
     if (err) {
-        console.log(err);
+        return console.error(err.message);
     }
-    else {
-        console.log('app listening on port 8080');
-    }
+    console.log('app listening on port 8080');
 });
 
